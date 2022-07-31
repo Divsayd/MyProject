@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+
+    <meta charset= "UTF-8">
+    <meta name="viewport" content="width=device-width;initial-scale=1">
+    <link rel="shortcut icon" href="hello.ico">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <title><b>Welcome to  INIYA Summer Camp</b></title>
+    <style>
+        h3{text-align: right;}
+    </style>
+</head>
+
+<body>
+<header>
+
+    <img src="asset/images/header-banner.png" width="1400" height="72" alt="Banner">
+
+    <h3 sec:authorize="isAnonymous()">
+    <a  th:href="@{/login} "> Login </a>
+    </h3>
+
+    <h1> <centre> <b> Welcome to Summer Camp </b></centre> </h1>
+</header>
+
+
+
+
+<ul>
+    <li sec:authorize="isAnonymous()"><a >Home</a></li>
+    <li sec:authorize="isAnonymous()"><a >Registration</a></li>
+
+
+    <li class="dropdown" sec:authorize="isAnonymous()">
+        <a href="javascript:void(0)" class="dropbtn">Programs</a>
+        <div class="dropdown-content">
+            <a href="#">Music</a>
+            <a th:href="@{/Swimming}">Swimming</a>
+            <a href="#">Sports</a>
+            <a th:href="@{/Art}">Art</a>
+            <a href="#">Games</a>
+        </div>
+    </li>
+    <li sec:authorize="isAuthenticated()"> <a th:href="@{/dashboard}"> Dashboard </a></li>
+    <li sec:authorize="isAnonymous()" > <a th:href="@{/contact}"> Contact </a></li>
+    <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}" >Logout</a></li>
+</ul>
+
+</body>
+
+</body>
+</html>

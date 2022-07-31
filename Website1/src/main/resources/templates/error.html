@@ -1,0 +1,30 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Summer camp welcomes you </title>
+    <!-- Google fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="asset/css/style-starter.css">
+</head>
+
+<body>
+
+<h1> <center>
+    <p th:text="${'Error Message - ' + errormsg}"></p>
+    <button   type="button"> <a th:href="@{/home}" > Go to Home </a></button></center></h1>
+
+
+
+</body>
+
+</html>

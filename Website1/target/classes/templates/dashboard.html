@@ -1,0 +1,20 @@
+
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+      <meta charset= "UTF-8">
+      <meta name="viewport" content="width=device-width;initial-scale=1">
+</head>
+<body>
+<header>
+<img src="asset/images/header-banner.png" width="1400" height="72" alt="Banner">
+</header>
+
+      <h3  th:text="${'Welcome - ' + User}"></h3>
+      <p th:text="${'You logged in as - ' + role}"></p>
+
+<h2 > <a th:href="@{/OpenMessages}">Messages</h2>
+
+</body>
+</html>
